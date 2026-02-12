@@ -1,0 +1,455 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#0a0a0a;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  background:#202020;
+  border-bottom:1px solid #222;
+  position:sticky;
+  top:0;
+  z-index:9999;
+}
+
+/* CONTAINER */
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+  position:relative;
+}
+
+/* LOGO */
+.logo{
+  font-size:26px;
+  font-weight:bold;
+  color:white;
+}
+
+/* NAV LINKS */
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.nav-links li{
+  position:relative;
+}
+
+/* LINKS */
+.nav-links a{
+  text-decoration:none;
+  color:#eaeaea;
+  padding:8px 14px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  position:relative;
+  transition:0.3s;
+  white-space:nowrap;
+}
+
+/* HOVER BOX */
+.nav-links a:hover{
+  background:#2a2a2a;
+  color:white;
+}
+
+/* UNDERLINE */
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:white;
+  transition:0.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+/* DROPDOWN */
+.dropdown-menu{
+  display:none;
+  position:absolute;
+  top:42px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+  border:1px solid #222;
+  border-radius:8px;
+  min-width:200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  overflow:hidden;
+  z-index:9999;
+}
+
+/* DROPDOWN LINKS */
+.dropdown-menu a{
+  display:block;
+  padding:10px 15px;
+  color:#eaeaea;
+}
+
+.dropdown-menu a:hover{
+  background:#222;
+}
+
+/* SHOW DROPDOWN DESKTOP */
+@media(min-width:769px){
+  .dropdown:hover .dropdown-menu{
+    display:block;
+  }
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  color:white;
+  cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:60px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#111;
+    flex-direction:column;
+    width:90%;
+    max-width:320px;
+    display:none;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+    animation:fadeDown 0.3s ease;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    justify-content:center;
+  }
+
+  /* MOBILE DROPDOWN */
+  .dropdown-menu{
+    position:static;
+    transform:none;
+    margin-top:5px;
+    border:none;
+    background:#1a1a1a;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeDown{
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+.dropdown-menu.show {
+  display: block;
+}
+@media(max-width:768px){
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    margin-top: 5px;
+    border: none;
+    background: #1a1a1a;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+  background: #202020;
+  color: white;
+  padding-top: 60px;
+}
+
+/* Layout */
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 20px 40px;
+}
+
+/* Columns */
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Links */
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  padding-left: 6px;
+  opacity: 0.8;
+}
+
+/* Social Icons */
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: white;
+  color: #0f5be6;
+  transform: translateY(-4px);
+}
+
+/* Bottom */
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.15);
+  font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* GLOBAL */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#0f1115;
+  color:white;
+  line-height:1.6;
+}
+
+.section{
+  padding:80px 20px;
+  text-align:center;
+  animation:fadeUp 1s ease;
+}
+
+h2{
+  margin-bottom:20px;
+}
+
+/* HERO */
+.hero{
+  height:80vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#12131a,#1e2230);
+  animation:fadeIn 1s ease;
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero p{
+  margin-top:10px;
+  opacity:0.85;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 26px;
+  background:#6c63ff;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#5147ff;
+  transform:scale(1.05);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:1100px;
+  margin:40px auto 0;
+}
+
+/* CARDS */
+.card{
+  background:#1b1e27;
+  padding:25px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.card.small{
+  padding:20px;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 20px rgba(108,99,255,0.4);
+}
+
+.card i{
+  font-size:28px;
+  margin-bottom:10px;
+  color:#6c63ff;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#14162b,#1c1f3a);
+  padding:90px 20px;
+  text-align:center;
+  animation:fadeIn 1s ease;
+}
+
+.cta p{
+  opacity:0.8;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(-40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    height:auto;
+    padding:80px 20px;
+  }
+
+  h1{
+    font-size:28px;
+  }
+}

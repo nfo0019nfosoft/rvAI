@@ -13,45 +13,46 @@
    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
+
+
 <body>
 
-<nav class="navbar">
 
+<nav class="navbar">
   <div class="nav-container">
 
-    <!-- Logo -->
-    <div class="logo">
-      rvAI Innovations
+    <div class="logo">rvAI Innovations</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
     </div>
 
-    <!-- Mobile Button -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-
-    <!-- Nav Links -->
     <ul class="nav-links" id="navLinks">
 
-      <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
 
-      <!-- Dropdown -->
-      <li class="dropdown">
-        <a href="#"><i class="fa-solid fa-box"></i> Products <i class="fa-solid fa-caret-down"></i></a>
+    <li class="dropdown">
+  <a href="products.html" onclick="toggleDropdown(event)">
+    <i class="fa-solid fa-box"></i> Products
+    <i class="fa-solid fa-caret-down"></i>
+  </a>
 
-        <div class="dropdown-menu">
-          <a href="#"><i class="fa-solid fa-robot"></i> Chatbot AI</a>
-          <a href="#"><i class="fa-solid fa-envelope"></i> Email AI</a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp AI</a>
-          <a href="#"><i class="fa-solid fa-comment-sms"></i> SMS AI</a>
-          <a href="#"><i class="fa-solid fa-phone"></i> IVR AI</a>
-          <a href="#"><i class="fa-solid fa-pen"></i> Content AI</a>
-          <a href="#"><i class="fa-solid fa-music"></i> Music AI</a>
-        </div>
-      </li>
+  <div class="dropdown-menu" id="productMenu">
+    <a href="chatbot.html"><i class="fa-solid fa-robot"></i> Chatbot AI</a>
+    <a href="email.html"><i class="fa-solid fa-envelope"></i> Email AI</a>
+    <a href="whatsapp.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp AI</a>
+    <a href="sms.html"><i class="fa-solid fa-comment"></i> SMS AI</a>
+    <a href="ivr.html"><i class="fa-solid fa-phone"></i> IVR AI</a>
+    <a href="content.html"><i class="fa-solid fa-pen"></i> Content AI</a>
+    <a href="music.html"><i class="fa-solid fa-music"></i> Music AI</a>
+  </div>
+</li>
 
-      <li><a href="#"><i class="fa-solid fa-industry"></i> Industry We Serve</a></li>
-      <li><a href="#"><i class="fa-solid fa-tags"></i> Pricing</a></li>
-      <li><a href="#"><i class="fa-solid fa-envelope-open-text"></i> Contact Us</a></li>
+
+      <li><a href="industry.html"><i class="fa-solid fa-industry"></i> Industry We Serve</a></li>
+      <li><a href="pricing.html"><i class="fa-solid fa-tags"></i> Pricing</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
 
     </ul>
 
@@ -59,13 +60,14 @@
 </nav>
 
 <script>
-
 function toggleMenu() {
-  var menu = document.getElementById("navLinks");
-  menu.classList.toggle("active");
+  document.getElementById("navLinks").classList.toggle("active");
 }
 
-
+function toggleDropdown(e) {
+  e.preventDefault();
+  document.getElementById("productMenu").classList.toggle("show");
+}
 </script>
 
 
@@ -465,10 +467,10 @@ function toggleMenu() {
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
