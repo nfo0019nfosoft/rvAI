@@ -13,7 +13,6 @@
    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-
 <body>
 
 <nav class="navbar">
@@ -21,12 +20,13 @@
   <div class="nav-container">
 
     <!-- Logo -->
-    <div class="logo">rvAI Innovations</div>
-
-    <!-- Mobile Menu Button -->
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <i class="fa-solid fa-bars"></i>
+    <div class="logo">
+      rvAI Innovations
     </div>
+
+    <!-- Mobile Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 
     <!-- Nav Links -->
     <ul class="nav-links" id="navLinks">
@@ -36,25 +36,22 @@
 
       <!-- Dropdown -->
       <li class="dropdown">
-        <a href="#" onclick="toggleDropdown(event)">
-          <i class="fa-solid fa-box"></i> Products
-          <i class="fa-solid fa-caret-down"></i>
-        </a>
+        <a href="#"><i class="fa-solid fa-box"></i> Products <i class="fa-solid fa-caret-down"></i></a>
 
-        <div class="dropdown-menu" id="productMenu">
+        <div class="dropdown-menu">
           <a href="#"><i class="fa-solid fa-robot"></i> Chatbot AI</a>
           <a href="#"><i class="fa-solid fa-envelope"></i> Email AI</a>
           <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp AI</a>
-          <a href="#"><i class="fa-solid fa-comment"></i> SMS AI</a>
+          <a href="#"><i class="fa-solid fa-comment-sms"></i> SMS AI</a>
           <a href="#"><i class="fa-solid fa-phone"></i> IVR AI</a>
           <a href="#"><i class="fa-solid fa-pen"></i> Content AI</a>
           <a href="#"><i class="fa-solid fa-music"></i> Music AI</a>
         </div>
       </li>
 
-      <li><a href="#"><i class="fa-solid fa-industry"></i> Industry</a></li>
+      <li><a href="#"><i class="fa-solid fa-industry"></i> Industry We Serve</a></li>
       <li><a href="#"><i class="fa-solid fa-tags"></i> Pricing</a></li>
-      <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="#"><i class="fa-solid fa-envelope-open-text"></i> Contact Us</a></li>
 
     </ul>
 
@@ -62,17 +59,14 @@
 </nav>
 
 <script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("active");
+
+function toggleMenu() {
+  var menu = document.getElementById("navLinks");
+  menu.classList.toggle("active");
 }
 
-function toggleDropdown(e){
-  e.preventDefault();
-  document.getElementById("productMenu").classList.toggle("show");
-}
+
 </script>
-
-
 
 
 
