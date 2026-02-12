@@ -25,9 +25,8 @@
     </div>
 
     <!-- Mobile Button -->
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <i class="fa-solid fa-bars"></i>
-    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 
     <!-- Nav Links -->
     <ul class="nav-links" id="navLinks">
@@ -60,9 +59,13 @@
 </nav>
 
 <script>
+
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  var menu = document.getElementById("navLinks");
+  menu.classList.toggle("active");
 }
+
+
 </script>
 
 
