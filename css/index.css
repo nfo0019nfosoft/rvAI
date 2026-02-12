@@ -87,7 +87,7 @@
 }
 
 .dropdown-menu a {
-  color: #222;
+  color: darkblue;
   padding: 10px 15px;
   display: block;
 }
@@ -825,7 +825,7 @@
 .getstarted-left ul {
   list-style: none;
   padding: 0;
-  color:darkblue
+  color:black;
   
 }
 
@@ -833,12 +833,12 @@
   margin-bottom: 12px;
   font-size: 15px;
   animation: fadeUp 1.2s ease;
-  color:darkblue;
+  color:black;
 }
 
 .getstarted-left i {
   margin-right: 8px;
-  color:balck;
+  
 }
 
 /* FORM BOX */
