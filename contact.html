@@ -78,13 +78,12 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
+<title>Contact</title>
 
 <link rel="stylesheet" href="contact.css">
 
@@ -97,7 +96,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <!-- HERO -->
 <section class="hero">
 
-  <!-- floating icons -->
   <div class="bg-icons">
     <i class="fa-solid fa-envelope icon1"></i>
     <i class="fa-solid fa-phone icon2"></i>
@@ -116,7 +114,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </section>
 
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section class="contact-section">
   <div class="container">
 
@@ -129,33 +127,45 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         <h3>SEND A MESSAGE</h3>
 
         <form action="https://formsubmit.co/support@rvaiinnovations.com" method="POST">
-
           <input type="text" name="name" placeholder="Full Name" required>
           <input type="email" name="email" placeholder="Email Address" required>
           <input type="tel" name="phone" placeholder="Phone Number" required>
-
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
           <button type="submit">Send Message</button>
-
         </form>
       </div>
-
 
       <!-- INFO -->
       <div class="contact-info right">
         <h3>CONTACT DETAILS</h3>
 
-        <p><i class="fa-solid fa-envelope"></i> support@rvaiinnovations.com</p>
-        <p><i class="fa-solid fa-phone"></i> +91 90000 00000</p>
-        <p><i class="fa-solid fa-location-dot"></i>
-          Madhapur, Near Infosys Campus,<br>
-          Hyderabad, Telangana, India
-        </p>
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <p>support@rvaiinnovations.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Phone</strong>
+            <p>+91 90000 00000</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Office</strong>
+            <p>Madhapur, Near Infosys Campus<br>Hyderabad, Telangana</p>
+          </div>
+        </div>
+
       </div>
 
     </div>
-
   </div>
 </section>
 
@@ -164,13 +174,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <section class="map-section">
   <div class="container">
 
-    <h2 class="section-title">OUR LOCATION</h2>
+    <h2 class="map-title">OUR LOCATION</h2>
 
     <div class="map-wrapper left">
       <iframe
-        src="https://maps.google.com/maps?q=Infosys%20Madhapur%20Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        frameborder="0"
-        allowfullscreen>
+        src="https://maps.google.com/maps?q=Infosys%20Madhapur%20Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed">
       </iframe>
     </div>
 
@@ -189,56 +197,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 <footer class="footer">
 
-  <div class="footer-container">
+  <div class="footer-inner">
 
-    <!-- Column 1 -->
-    <div class="footer-col">
-      <h3>rvAI Innovations</h3>
+    <!-- Brand -->
+    <div class="footer-brand left-animate">
+      <h2>rvAI Innovations</h2>
       <p>
-        Intelligent AI automation solutions for modern businesses.
-        Automate workflows, engage customers, and grow faster.
+        Intelligent AI automation solutions designed to
+        automate workflows, engage customers and scale businesses.
       </p>
-    </div>
 
-    <!-- Column 2 -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3 -->
-    <div class="footer-col">
-      <h4>Footer Links</h4>
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Refund Policy</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 4 -->
-    <div class="footer-col">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
+      <div class="footer-social">
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -246,11 +217,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       </div>
     </div>
 
+    <!-- Links -->
+    <div class="footer-links left-animate">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-links right-animate">
+      <h4>Resources</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Refund Policy</a>
+      <a href="#">Support</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact right-animate">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Madhapur, Hyderabad</p>
+      <p><i class="fa-solid fa-phone"></i> +91 90000 00000</p>
+      <p><i class="fa-solid fa-envelope"></i> info@rvai.in</p>
+    </div>
+
   </div>
 
-  <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© 2025 rvAI Innovations. All Rights Reserved.</p>
+    © 2026 rvAI Innovations. All Rights Reserved.
   </div>
 
 </footer>

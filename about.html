@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>rvAI Innovations</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/pricing.css">
+  <link rel="stylesheet" href="css/about.css">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 
@@ -18,59 +18,229 @@
 <body>
 
 
-<nav class="navbar">
-  <div class="nav-container">
+  <nav class="navbar">
+    <div class="nav-container">
 
-    <div class="logo">rvAI Innovations</div>
+      <div class="logo">rvAI Innovations</div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <i class="fa-solid fa-bars"></i>
-    </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
 
-    <ul class="nav-links" id="navLinks">
+      <ul class="nav-links" id="navLinks">
 
-      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
 
-   <li class="dropdown">
-  <a href="products.html" id="productsLink">
-    <i class="fa-solid fa-box"></i> Products
-    <i class="fa-solid fa-caret-down"></i>
-  </a>
+        <li class="dropdown">
+          <a href="products.html" id="productsLink">
+            <i class="fa-solid fa-box"></i> Products
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
 
-  <div class="dropdown-menu" id="productMenu">
-    <a href="chatbot.html"><i class="fa-solid fa-robot"></i> Chatbot AI</a>
-    <a href="email.html"><i class="fa-solid fa-envelope"></i> Email AI</a>
-    <a href="whatsapp.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp AI</a>
-    <a href="sms.html"><i class="fa-solid fa-comment"></i> SMS AI</a>
-    <a href="ivr.html"><i class="fa-solid fa-phone"></i> IVR AI</a>
-    <a href="content.html"><i class="fa-solid fa-pen"></i> Content AI</a>
-    <a href="music.html"><i class="fa-solid fa-music"></i> Music AI</a>
-  </div>
-</li>
-   
-      <li><a href="industry.html"><i class="fa-solid fa-industry"></i> Industry We Serve</a></li>
-      <li><a href="pricing.html"><i class="fa-solid fa-tags"></i> Pricing</a></li>
-      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+          <div class="dropdown-menu" id="productMenu">
+            <a href="chatbot.html"><i class="fa-solid fa-robot"></i> Chatbot AI</a>
+            <a href="email.html"><i class="fa-solid fa-envelope"></i> Email AI</a>
+            <a href="whatsapp.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp AI</a>
+            <a href="sms.html"><i class="fa-solid fa-comment"></i> SMS AI</a>
+            <a href="ivr.html"><i class="fa-solid fa-phone"></i> IVR AI</a>
+            <a href="content.html"><i class="fa-solid fa-pen"></i> Content AI</a>
+            <a href="music.html"><i class="fa-solid fa-music"></i> Music AI</a>
+          </div>
+        </li>
+
+        <li><a href="industry.html"><i class="fa-solid fa-industry"></i> Industry We Serve</a></li>
+        <li><a href="pricing.html"><i class="fa-solid fa-tags"></i> Pricing</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
       </ul>
 
 
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    /* Mobile dropdown */
+    document.getElementById("productsLink").addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault(); // prevent page open only on mobile
+        document.getElementById("productMenu").classList.toggle("show");
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <section class="about-hero">
+
+    <!-- Background floating product icons -->
+    <div class="bg-icons">
+      <i class="fa-solid fa-robot i1"></i>
+      <i class="fa-brands fa-whatsapp i2"></i>
+      <i class="fa-solid fa-envelope i3"></i>
+      <i class="fa-solid fa-comment-sms i4"></i>
+      <i class="fa-solid fa-phone i5"></i>
+      <i class="fa-solid fa-pen i6"></i>
+      <i class="fa-solid fa-music i7"></i>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <h1>ABOUT rvAI INNOVATIONS</h1>
+      <p>
+        We create AI-powered solutions that automate communication,
+        improve customer experience, and help businesses scale faster.
+      </p>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  
+<section class="about-section">
+
+  <!-- Heading -->
+  <div class="about-header">
+    <h2>COMPANY OVERVIEW</h2>
+    <p>
+      rvAI Innovations builds smart automation systems that help businesses
+      respond faster, reduce manual work, and grow using Artificial Intelligence.
+    </p>
   </div>
-</nav>
 
-<script>
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
-}
+  <div class="about-layout">
 
-/* Mobile dropdown */
-document.getElementById("productsLink").addEventListener("click", function(e) {
-  if (window.innerWidth <= 768) {
-    e.preventDefault(); // prevent page open only on mobile
-    document.getElementById("productMenu").classList.toggle("show");
-  }
-});
-</script>
+    <!-- LEFT SIDE -->
+    <div class="about-left">
+
+      <p class="about-text">
+        We create intelligent automation solutions that improve productivity,
+        increase engagement, and help organizations scale efficiently.
+      </p>
+
+      <div class="big-card">
+        <div class="card-line"></div>
+        <div class="card-content">
+          <i class="fa-solid fa-robot"></i>
+          <h3>AI Automation</h3>
+          <p>Automate workflows and customer interactions easily.</p>
+        </div>
+      </div>
+
+      <div class="big-card">
+        <div class="card-line"></div>
+        <div class="card-content">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Smart Engagement</h3>
+          <p>Improve communication and customer response time.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (6 CARDS) -->
+    <div class="about-right">
+
+      <div class="mini-box">
+        <i class="fa-solid fa-brain"></i>
+        <span>Expertise</span>
+      </div>
+
+      <div class="mini-box">
+        <i class="fa-solid fa-gears"></i>
+        <span>Automation</span>
+      </div>
+
+      <div class="mini-box">
+        <i class="fa-solid fa-bolt"></i>
+        <span>Fast Setup</span>
+      </div>
+
+      <div class="mini-box">
+        <i class="fa-solid fa-cloud"></i>
+        <span>Cloud Ready</span>
+      </div>
+
+      <div class="mini-box">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Security</span>
+      </div>
+
+      <div class="mini-box">
+        <i class="fa-solid fa-headset"></i>
+        <span>Support</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<section class="vision-mission-section">
+
+  <div class="vm-container">
+
+    <!-- Vision -->
+    <div class="vm-block vm-left">
+      <div class="vm-icon">
+        <i class="fa-solid fa-eye"></i>
+      </div>
+
+      <div class="vm-text">
+        <h2>Our Vision</h2>
+        <p>
+          To empower businesses with intelligent AI solutions that simplify
+          communication, automate operations, and accelerate growth across
+          industries. We aim to become a trusted technology partner for
+          organizations seeking scalable and innovative automation platforms.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mission -->
+    <div class="vm-block vm-right">
+
+      <div class="vm-text">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to design reliable, scalable, and affordable AI tools
+          that improve customer engagement and operational efficiency.
+          We continuously innovate to deliver solutions that help businesses
+          stay competitive in a rapidly evolving digital world.
+        </p>
+      </div>
+
+      <div class="vm-icon">
+        <i class="fa-solid fa-bullseye"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
@@ -81,6 +251,69 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
 
 
 
+<section class="whatwedo-section">
+  <h2 class="section-title">WHAT WE DO</h2>
+
+  <div class="timeline-wrapper">
+    <div class="main-line"></div>
+
+    <div class="timeline-container">
+      <div class="timeline-item top">
+        <div class="content">
+          <i class="fa-solid fa-robot"></i>
+          <h4>AI Automation</h4>
+          <p>Smart systems that automate workflows.</p>
+        </div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="timeline-item bottom">
+        <div class="dot"></div>
+        <div class="content">
+          <i class="fa-brands fa-whatsapp"></i>
+          <h4>WhatsApp</h4>
+          <p>Direct customer engagement.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item top">
+        <div class="content">
+          <i class="fa-solid fa-phone"></i>
+          <h4>IVR Systems</h4>
+          <p>Automated voice solutions.</p>
+        </div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="timeline-item bottom">
+        <div class="dot"></div>
+        <div class="content">
+          <i class="fa-solid fa-envelope"></i>
+          <h4>Email Marketing</h4>
+          <p>Automated campaigns.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item top">
+        <div class="content">
+          <i class="fa-solid fa-comment"></i>
+          <h4>SMS Automation</h4>
+          <p>Bulk messaging solutions.</p>
+        </div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="timeline-item bottom">
+        <div class="dot"></div>
+        <div class="content">
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>Analytics</h4>
+          <p>Performance tracking insights.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -91,51 +324,71 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
 
 
 
+<section class="why-section">
 
+  <h2 class="why-title">WHY CHOOSE rvAI</h2>
+  <p class="why-subtitle">
+    Powerful AI automation solutions designed to help businesses scale faster, reduce manual work, and improve customer engagement.
+  </p>
 
+  <div class="why-grid">
+
+    <div class="why-card">
+      <i class="fa-solid fa-bolt"></i>
+      <h3>Fast Deployment</h3>
+      <p>Deploy AI solutions quickly with minimal setup and seamless integration.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-gear"></i>
+      <h3>Automation First</h3>
+      <p>Automate repetitive tasks and improve operational efficiency across workflows.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Secure Platform</h3>
+      <p>Enterprise-grade security and reliability for critical business operations.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Scalable Growth</h3>
+      <p>Our AI systems grow with your business and handle increasing demand.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-headset"></i>
+      <h3>Expert Support</h3>
+      <p>Dedicated team to guide you from onboarding to full deployment.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h3>Smart Insights</h3>
+      <p>Data-driven analytics to help you make better business decisions.</p>
+    </div>
+
+  </div>
+
+</section>
 
 
 
 
 <footer class="footer">
 
-  <div class="footer-container">
+  <div class="footer-inner">
 
-    <!-- Column 1 -->
-    <div class="footer-col">
-      <h3>rvAI Innovations</h3>
+    <!-- Brand -->
+    <div class="footer-brand left-animate">
+      <h2>rvAI Innovations</h2>
       <p>
-        Intelligent AI automation solutions for modern businesses.
-        Automate workflows, engage customers, and grow faster.
+        Intelligent AI automation solutions designed to
+        automate workflows, engage customers and scale businesses.
       </p>
-    </div>
 
-    <!-- Column 2 -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3 -->
-    <div class="footer-col">
-      <h4>Footer Links</h4>
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Refund Policy</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 4 -->
-    <div class="footer-col">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
+      <div class="footer-social">
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -143,15 +396,41 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
       </div>
     </div>
 
+    <!-- Links -->
+    <div class="footer-links left-animate">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-links right-animate">
+      <h4>Resources</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Refund Policy</a>
+      <a href="#">Support</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact right-animate">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Madhapur, Hyderabad</p>
+      <p><i class="fa-solid fa-phone"></i> +91 90000 00000</p>
+      <p><i class="fa-solid fa-envelope"></i> info@rvai.in</p>
+    </div>
+
   </div>
 
-  <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© 2025 rvAI Innovations. All Rights Reserved.</p>
+    © 2026 rvAI Innovations. All Rights Reserved.
   </div>
 
 </footer>
 
 
 </body>
+
 </html>
