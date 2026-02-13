@@ -6,12 +6,13 @@
   <title>rvAI Innovations</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/email.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 
 
 <body>
@@ -31,8 +32,8 @@
       <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
       <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
 
-   <li class="dropdown">
-  <a href="products.html" id="productsLink">
+    <li class="dropdown">
+  <a href="products.html" onclick="toggleDropdown(event)">
     <i class="fa-solid fa-box"></i> Products
     <i class="fa-solid fa-caret-down"></i>
   </a>
@@ -47,12 +48,13 @@
     <a href="music.html"><i class="fa-solid fa-music"></i> Music AI</a>
   </div>
 </li>
-   
+
+
       <li><a href="industry.html"><i class="fa-solid fa-industry"></i> Industry We Serve</a></li>
       <li><a href="pricing.html"><i class="fa-solid fa-tags"></i> Pricing</a></li>
       <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-      </ul>
 
+    </ul>
 
   </div>
 </nav>
@@ -62,14 +64,15 @@ function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");
 }
 
-/* Mobile dropdown */
-document.getElementById("productsLink").addEventListener("click", function(e) {
-  if (window.innerWidth <= 768) {
-    e.preventDefault(); // prevent page open only on mobile
-    document.getElementById("productMenu").classList.toggle("show");
-  }
-});
+function toggleDropdown(e) {
+  e.preventDefault();
+  document.getElementById("productMenu").classList.toggle("show");
+}
 </script>
+
+
+
+
 
 
 
@@ -80,15 +83,14 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
 
   <div class="hero-container">
 
-    <!-- LEFT CONTENT -->
     <div class="hero-text">
       <h1>
-        Boost Conversations with Our Intelligent
-        Chatbot Platform
+        Create High-Quality Content with Our Intelligent
+        Content AI Platform
       </h1>
 
       <p>
-        Build human-like AI chatbots for websites, apps, and customer service in minutes.
+        Generate blog posts, social media captions, marketing copy, and product descriptions in seconds using powerful AI tools.
       </p>
 
       <div class="hero-buttons">
@@ -97,21 +99,18 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
       </div>
     </div>
 
-    <!-- RIGHT SIDE ICON BOT -->
     <div class="hero-bot">
-
       <div class="bot-circle">
-        <i class="fa-solid fa-robot"></i>
+        <i class="fa-solid fa-pen-nib"></i>
       </div>
 
       <div class="chat-bubble bubble1">
-        <i class="fa-solid fa-comment-dots"></i>
+        <i class="fa-solid fa-file-lines"></i>
       </div>
 
       <div class="chat-bubble bubble2">
-        <i class="fa-solid fa-message"></i>
+        <i class="fa-solid fa-lightbulb"></i>
       </div>
-
     </div>
 
   </div>
@@ -123,11 +122,11 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
 <section class="section overview">
   <h2>OVERVIEW</h2>
   <p>
-    Our AI chatbot helps businesses deliver instant support, qualify leads,
-    and automate workflows across website, WhatsApp, and email.  
-    Designed for speed, scalability, and seamless user experience.
+    Our Content AI platform helps businesses, marketers, and creators generate high-quality written content quickly and efficiently.
+    From blog articles to marketing copy, automate content creation while maintaining quality and consistency.
   </p>
 </section>
+
 
 <!-- FEATURES -->
 <section class="section features">
@@ -136,34 +135,31 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
   <div class="grid">
 
     <div class="card">
-      <i class="fa-solid fa-brain"></i>
-      <h3>Smart AI Engine</h3>
-      <p>Understands intent and responds with natural conversations.</p>
+      <i class="fa-solid fa-pen"></i>
+      <h3>AI Content Generation</h3>
+      <p>Create blogs, captions, emails, and marketing copy instantly.</p>
     </div>
 
     <div class="card">
-      <i class="fa-solid fa-clock"></i>
-      <h3>24/7 Automation</h3>
-      <p>Always available to assist visitors and capture leads.</p>
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+      <h3>Smart Editing</h3>
+      <p>Rewrite, expand, and improve content with AI assistance.</p>
     </div>
 
     <div class="card">
       <i class="fa-solid fa-chart-line"></i>
-      <h3>Analytics Dashboard</h3>
-      <p>Track conversations, performance, and conversion metrics.</p>
+      <h3>SEO Optimization</h3>
+      <p>Generate content optimized for search engines and engagement.</p>
     </div>
 
     <div class="card">
       <i class="fa-solid fa-plug"></i>
       <h3>Easy Integration</h3>
-      <p>Connect with CRM, WhatsApp, and marketing tools.</p>
+      <p>Connect with CMS platforms, blogs, and marketing tools.</p>
     </div>
 
   </div>
 </section>
-
-
-
 
 
 <!-- USE CASES -->
@@ -173,23 +169,23 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
   <div class="grid">
 
     <div class="card small">
-      <h3>Customer Support</h3>
-      <p>Answer FAQs instantly and reduce support workload.</p>
+      <h3>Blog Writing</h3>
+      <p>Generate long-form blog posts and articles quickly.</p>
     </div>
 
     <div class="card small">
-      <h3>Lead Qualification</h3>
-      <p>Capture leads and qualify them automatically.</p>
+      <h3>Social Media Content</h3>
+      <p>Create engaging captions and posts for all platforms.</p>
     </div>
 
     <div class="card small">
-      <h3>Appointment Booking</h3>
-      <p>Schedule meetings without manual coordination.</p>
+      <h3>Marketing Copy</h3>
+      <p>Write ad copy, landing pages, and product descriptions.</p>
     </div>
 
     <div class="card small">
-      <h3>Product Guidance</h3>
-      <p>Help customers find the right product faster.</p>
+      <h3>Email Campaigns</h3>
+      <p>Generate personalized email campaigns and newsletters.</p>
     </div>
 
   </div>
@@ -204,27 +200,57 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
 
     <div class="card small">
       <i class="fa-solid fa-bolt"></i>
-      <p>Faster email replies and improved customer experience</p>
+      <p>Create high-quality content faster and more efficiently</p>
     </div>
 
     <div class="card small">
       <i class="fa-solid fa-money-bill"></i>
-      <p>Reduce operational and email handling costs</p>
+      <p>Reduce content production and marketing costs</p>
     </div>
 
     <div class="card small">
       <i class="fa-solid fa-users"></i>
-      <p>Increase engagement with timely and personalized emails</p>
+      <p>Improve audience engagement and reach</p>
     </div>
 
     <div class="card small">
       <i class="fa-solid fa-rocket"></i>
-      <p>Scale email communication without increasing team size</p>
+      <p>Scale content creation without growing large teams</p>
     </div>
 
   </div>
 </section>
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

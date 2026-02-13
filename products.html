@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rvAI Innovations</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/products.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+
+<body>
+
+
+<nav class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">rvAI Innovations</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+
+   <li class="dropdown">
+  <a href="products.html" id="productsLink">
+    <i class="fa-solid fa-box"></i> Products
+    <i class="fa-solid fa-caret-down"></i>
+  </a>
+
+  <div class="dropdown-menu" id="productMenu">
+    <a href="chatbot.html"><i class="fa-solid fa-robot"></i> Chatbot AI</a>
+    <a href="email.html"><i class="fa-solid fa-envelope"></i> Email AI</a>
+    <a href="whatsapp.html"><i class="fa-brands fa-whatsapp"></i> WhatsApp AI</a>
+    <a href="sms.html"><i class="fa-solid fa-comment"></i> SMS AI</a>
+    <a href="ivr.html"><i class="fa-solid fa-phone"></i> IVR AI</a>
+    <a href="content.html"><i class="fa-solid fa-pen"></i> Content AI</a>
+    <a href="music.html"><i class="fa-solid fa-music"></i> Music AI</a>
+  </div>
+</li>
+   
+      <li><a href="industry.html"><i class="fa-solid fa-industry"></i> Industry We Serve</a></li>
+      <li><a href="pricing.html"><i class="fa-solid fa-tags"></i> Pricing</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+
+
+  </div>
+</nav>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+/* Mobile dropdown */
+document.getElementById("productsLink").addEventListener("click", function(e) {
+  if (window.innerWidth <= 768) {
+    e.preventDefault(); // prevent page open only on mobile
+    document.getElementById("productMenu").classList.toggle("show");
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>AI Solutions for Every Communication Channel</h1>
+    <p>
+      Automate conversations, marketing, customer support, and creative work
+      with our advanced AI product suite designed for modern businesses.
+    </p>
+    <a href="#products" class="btn">Explore Products</a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <h2>Our AI Product Suite</h2>
+    <p>
+      Our AI-powered tools help organizations automate communication, improve
+      customer experience, generate creative content, and scale operations
+      efficiently.
+    </p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <div class="container">
+    <div class="grid">
+
+      <div class="card">
+        <i class="fa-solid fa-robot icon"></i>
+        <h3>Chatbot AI</h3>
+        <p>Automate customer conversations and support using intelligent AI chat systems.</p>
+        <ul>
+          <li>24/7 automated replies</li>
+          <li>Lead capture</li>
+          <li>Website integration</li>
+        </ul>
+        <a href="#">View Product →</a>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-envelope icon"></i>
+        <h3>Email AI</h3>
+        <p>Generate, personalize, and automate emails for marketing and engagement.</p>
+        <ul>
+          <li>Smart templates</li>
+          <li>Campaign automation</li>
+          <li>Email analytics</li>
+        </ul>
+        <a href="#">View Product →</a>
+      </div>
+
+      <div class="card">
+        <i class="fa-brands fa-whatsapp icon"></i>
+        <h3>WhatsApp AI</h3>
+        <p>Automate WhatsApp conversations and campaigns with AI workflows.</p>
+        <ul>
+          <li>Instant replies</li>
+          <li>Broadcast campaigns</li>
+          <li>Automation flows</li>
+        </ul>
+        <a href="#">View Product →</a>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-comment-sms icon"></i>
+        <h3>SMS AI</h3>
+        <p>Send intelligent SMS campaigns and automated notifications.</p>
+        <ul>
+          <li>Bulk messaging</li>
+          <li>Event alerts</li>
+          <li>Marketing SMS</li>
+        </ul>
+        <a href="#">View Product →</a>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-phone-volume icon"></i>
+        <h3>IVR AI</h3>
+        <p>AI-powered voice automation and intelligent call routing.</p>
+        <ul>
+          <li>Voice recognition</li>
+          <li>Call automation</li>
+          <li>Smart routing</li>
+        </ul>
+        <a href="#">View Product →</a>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-pen-nib icon"></i>
+        <h3>Content AI</h3>
+        <p>Create blogs, ads, and marketing content instantly using AI.</p>
+        <ul>
+          <li>SEO articles</li>
+          <li>Ad copy</li>
+          <li>Social posts</li>
+        </ul>
+        <a href="#">View Product →</a>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-music icon"></i>
+        <h3>Music AI</h3>
+        <p>Generate original music tracks and sound effects instantly.</p>
+        <ul>
+          <li>Custom music</li>
+          <li>Royalty-free</li>
+          <li>Instant generation</li>
+        </ul>
+        <a href="#">View Product →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="container">
+    <h2 class="benefits-title">Why Businesses Choose Our AI Platform</h2>
+
+    <div class="benefits-grid">
+
+      <div class="benefit">
+        <i class="fa-solid fa-bolt"></i>
+        <h4>Fast Deployment</h4>
+        <p>Launch AI solutions quickly with minimal setup and seamless integration.</p>
+      </div>
+
+      <div class="benefit">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h4>Secure & Reliable</h4>
+        <p>Enterprise-grade infrastructure ensures high availability and data protection.</p>
+      </div>
+
+      <div class="benefit">
+        <i class="fa-solid fa-chart-line"></i>
+        <h4>Scalable Growth</h4>
+        <p>Our AI tools scale with your business and handle increasing demand easily.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>rvAI Innovations</h3>
+      <p>
+        Intelligent AI automation solutions for modern businesses.
+        Automate workflows, engage customers, and grow faster.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h4>Footer Links</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 rvAI Innovations. All Rights Reserved.</p>
+  </div>
+
+</footer>
+
+
+
+
+
+</body>
+</html>
