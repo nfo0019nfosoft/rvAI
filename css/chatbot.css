@@ -929,6 +929,77 @@ body{
   }
 }
 
+/* COMMON CARD DESIGN */
+.card {
+  background: rgba(2, 6, 23, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding: 24px 18px;
+  border-radius: 16px;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+  animation: cardFade 0.8s ease forwards;
+}
+
+/* Glow border effect */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(120deg, transparent, rgba(59,130,246,0.6), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(30,64,175,0.35);
+}
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.card i {
+  font-size: 28px;
+  color: #93C5FD;
+  margin-bottom: 12px;
+  display: block;
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+.section h2 {
+  animation: zoomTitle 0.8s ease forwards;
+}
+
+@keyframes zoomTitle {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 
 
