@@ -539,40 +539,58 @@ body{
 
 
 
-
-
 /* OVERVIEW SECTION */
-
 .overview {
   padding: 80px 20px;
-  background: #020617;   /* section background */
+  background: #020617;   
   color: #FFFFFF;
   text-align: center;
-}
-
-/* Container spacing (optional but recommended) */
-.overview h2 {
-  font-size: 34px;
-  margin-bottom: 15px;
-  color: #FFFFFF;   /* heading color */
-}
-
-.overview p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 17px;
-  line-height: 1.6;
-  color: #D1D5DB;   /* paragraph color */
-}
-
-/* Optional subtle divider effect */
-.overview {
   border-top: 1px solid #1E293B;
   border-bottom: 1px solid #1E293B;
 }
 
-/* Mobile */
+/* Heading */
+.overview h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+  animation: zoomLeft 0.9s ease forwards;
+}
 
+/* Content */
+.overview p {
+  max-width: 800px;   /* keeps content shorter (about 2–3 lines) */
+  margin: auto;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #D1D5DB;
+  animation: zoomRight 0.9s ease forwards;
+}
+
+/* Zoom Animations */
+@keyframes zoomLeft {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes zoomRight {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .overview h2 {
     font-size: 26px;
@@ -580,10 +598,9 @@ body{
 
   .overview p {
     font-size: 15px;
+    max-width: 100%;
   }
 }
-
-
 
 
 
