@@ -1113,6 +1113,10 @@ pointer-events:none;
 
 
 
+.card:hover{
+transform:translateY(-5px);
+background:rgba(255,255,255,.08);
+}
 
 
 body{
@@ -1128,7 +1132,12 @@ position:relative;
 min-height:100vh;
 display:flex;
 align-items:center;
+
+flex:1;
+margin-top:-40px; /* adjust -30 to -60 if needed */
 }
+
+
 
 #bgCanvas{
 position:absolute;
