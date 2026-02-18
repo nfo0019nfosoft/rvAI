@@ -1099,65 +1099,40 @@ input:focus,textarea:focus{
 
 }
 
-.about-section.show,
-.products-section.show,
-.benefits-section.show,
-.getstarted-section.show{
-opacity:1;
-transform:translateY(0);
-}
-#bgCanvas{
-pointer-events:none;
-}
 
 
 
 
 
-
-body{
-margin:0;
-font-family:Manrope,sans-serif;
-background:linear-gradient(135deg,#020617,#1E40AF);
-color:white;
-overflow-x:hidden;
-}
 
 .hero{
 position:relative;
 min-height:100vh;
+background:linear-gradient(135deg,#020617,#0f1f5c,#1E40AF);
 display:flex;
 align-items:center;
-}
-
-#bgCanvas{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:0;
+overflow:hidden;
 }
 
 .hero-container{
 display:flex;
-width:100%;
+gap:60px;
 max-width:1300px;
 margin:auto;
-gap:40px;
-padding:80px 20px;
-z-index:2;
+padding:90px 20px;
+width:100%;
 }
 
 .hero-left,.hero-right{
 flex:1;
 }
 
+/* Animated label line */
 .label{
 display:flex;
 align-items:center;
 gap:10px;
-margin-bottom:20px;
+margin-bottom:18px;
 letter-spacing:2px;
 font-size:12px;
 color:#93c5fd;
@@ -1167,45 +1142,57 @@ color:#93c5fd;
 width:40px;
 height:2px;
 background:linear-gradient(90deg,#60a5fa,transparent);
-animation:lineMove 2s infinite;
+position:relative;
+overflow:hidden;
 }
 
-@keyframes lineMove{
-0%{width:0}
-100%{width:40px}
+.line::after{
+content:"";
+position:absolute;
+left:-100%;
+width:100%;
+height:100%;
+background:#60a5fa;
+animation:lineFlow 2s infinite;
 }
 
+@keyframes lineFlow{
+0%{left:-100%}
+100%{left:100%}
+}
+
+/* Heading */
 h1{
-font-size:48px;
+font-size:52px;
 line-height:1.1;
 margin-bottom:10px;
 }
 
+/* Color shifting */
 .gradient-text{
-background:linear-gradient(90deg,#60a5fa,#3b82f6,#60a5fa);
-background-size:200%;
+background:linear-gradient(90deg,#60a5fa,#3b82f6,#93c5fd,#60a5fa);
+background-size:300%;
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-animation:gradientMove 4s linear infinite;
+animation:gradientShift 5s linear infinite;
 }
 
-@keyframes gradientMove{
+@keyframes gradientShift{
 0%{background-position:0%}
-100%{background-position:200%}
+100%{background-position:300%}
 }
 
-.subtitle{opacity:.7;font-style:italic;margin-bottom:15px;}
-.description{opacity:.8;margin-bottom:20px;}
-
+/* Buttons */
 .buttons{
 display:flex;
 gap:20px;
-align-items:center;
+margin-top:20px;
+margin-bottom:30px;
 }
 
 .btn-primary{
 background:#3b82f6;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:8px;
 text-decoration:none;
 color:white;
@@ -1216,18 +1203,20 @@ color:#93c5fd;
 text-decoration:none;
 }
 
+/* Stats slightly lower */
 .stats{
-margin-top:30px;
+margin-top:50px;
 display:flex;
 align-items:center;
-gap:20px;
+gap:25px;
 background:rgba(255,255,255,.05);
-padding:20px;
-border-radius:12px;
+padding:22px;
+border-radius:14px;
 }
 
 .stat-box h2{
 margin:0;
+font-size:32px;
 }
 
 .divider{
@@ -1236,27 +1225,24 @@ height:40px;
 background:rgba(255,255,255,.2);
 }
 
+/* Cards bigger */
 .cards{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:18px;
+margin-top:10px;
 }
 
 .card{
 display:flex;
 gap:15px;
-align-items:center;
-background:rgba(255,255,255,.05);
-padding:15px;
-border-radius:12px;
+align-items:flex-start;
+background:rgba(255,255,255,.06);
+padding:18px;
+border-radius:14px;
 opacity:0;
-transform:translateY(30px);
-transition:.5s;
-}
-
-.card i{
-font-size:20px;
-color:#93c5fd;
+transform:translateY(25px);
+transition:.6s;
 }
 
 .card.show{
@@ -1264,32 +1250,44 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* Scroll indicator */
 .scroll-indicator{
-margin-top:20px;
-font-size:12px;
-opacity:.6;
+margin-top:40px;
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
+font-size:12px;
+opacity:.7;
 }
 
 .scroll-line{
 width:60px;
 height:2px;
 background:linear-gradient(90deg,#60a5fa,transparent);
-animation:scrollLine 2s infinite;
+position:relative;
+overflow:hidden;
 }
 
-@keyframes scrollLine{
-0%{width:0}
-100%{width:60px}
+.scroll-line::after{
+content:"";
+position:absolute;
+left:-100%;
+width:100%;
+height:100%;
+background:#60a5fa;
+animation:scrollMove 2s infinite;
 }
 
-/* reveal animation */
+@keyframes scrollMove{
+0%{left:-100%}
+100%{left:100%}
+}
+
+/* Reveal animation line by line */
 .reveal{
 opacity:0;
-transform:translateY(30px);
-transition:.6s;
+transform:translateY(25px);
+transition:.7s ease;
 }
 
 .reveal.show{
@@ -1297,10 +1295,9 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* mobile */
+/* Mobile */
 @media(max-width:900px){
 .hero-container{
 flex-direction:column;
-text-align:left;
 }
 }
