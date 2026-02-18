@@ -303,5 +303,43 @@ function toggleDropdown(e) {
 
 
 
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{
+  threshold:0.3
+});
+
+document.querySelectorAll(".overview").forEach(el=>{
+  observer.observe(el);
+});
+
+  
+document.querySelectorAll(".features").forEach(section=>{
+  observer.observe(section);
+});
+
+
+document.querySelectorAll(".usecases").forEach(section=>{
+  observer.observe(section);
+});
+
+
+document.querySelectorAll(".benefits").forEach(section=>{
+  observer.observe(section);
+});
+
+
+
+document.querySelectorAll(".cta").forEach(section=>{
+  observer.observe(section);
+});
+</script>
+
+
 </body>
 </html>

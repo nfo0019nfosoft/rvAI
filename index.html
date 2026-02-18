@@ -506,3 +506,42 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
   </div>
 
 </footer>
+
+
+
+
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.25});
+
+document.querySelectorAll(".getstarted-section").forEach(section=>{
+  observer.observe(section);
+});
+
+
+document.querySelectorAll(".benefits-section").forEach(section=>{
+  observer.observe(section);
+});
+
+
+document.querySelectorAll(".products-section").forEach(section=>{
+  observer.observe(section);
+});
+
+
+
+document.querySelectorAll(".about-section").forEach(section=>{
+  observer.observe(section);
+});
+
+
+</script>
+
+</body>
+</html>

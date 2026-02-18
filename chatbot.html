@@ -129,6 +129,19 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
   </p>
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- FEATURES -->
 <section class="section features">
   <h2>FEATURES</h2>
@@ -294,6 +307,68 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
   </div>
 
 </footer>
+
+
+
+
+
+
+
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{
+  threshold:0.3
+});
+
+document.querySelectorAll(".overview").forEach(el=>{
+  observer.observe(el);
+});
+
+  
+document.querySelectorAll(".features").forEach(section=>{
+  observer.observe(section);
+});
+
+
+document.querySelectorAll(".usecases").forEach(section=>{
+  observer.observe(section);
+});
+
+
+document.querySelectorAll(".benefits").forEach(section=>{
+  observer.observe(section);
+});
+
+
+
+document.querySelectorAll(".cta").forEach(section=>{
+  observer.observe(section);
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
