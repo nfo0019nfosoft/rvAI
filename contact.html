@@ -77,22 +77,6 @@ document.getElementById("productsLink").addEventListener("click", function(e) {
 
 
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
-
-<link rel="stylesheet" href="contact.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-
-<body>
-
 <!-- HERO -->
 <section class="hero">
 
@@ -125,15 +109,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       <!-- FORM -->
       <div class="contact-form left">
         <h3>SEND A MESSAGE</h3>
+<form id="contact-form">
 
-        <form action="https://formsubmit.co/support@rvaiinnovations.com" method="POST">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
+  <input type="text" name="name" placeholder="Full Name" required>
+
+  <input type="email" name="email" placeholder="Email Address" required>
+
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+
+  <input type="text" name="company" placeholder="Company Name">
+
+  <input type="text" name="industry" placeholder="Industry" required>
+
+  <!-- Correct Product Dropdown -->
+  <select name="product" required>
+    <option value="">Select Product</option>
+    <option>Chatbot AI</option>
+    <option>Email AI</option>
+    <option>WhatsApp AI</option>
+    <option>SMS AI</option>
+    <option>IVR AI</option>
+    <option>Content AI</option>
+    <option>Music AI</option>
+  </select>
+
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+
+  <!-- Status Message -->
+  <p id="contact-status" style="margin-top:10px;font-size:14px;"></p>
+
+</form>
+
+
+</div>
 
       <!-- INFO -->
       <div class="contact-info right">
@@ -168,6 +178,49 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     </div>
   </div>
 </section>
+
+
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const status = document.getElementById("contact-status");
+  status.style.color = "#93c5fd";
+  status.innerText = "Sending message...";
+
+  emailjs.sendForm(
+    "service_6fqpn37",
+    "template_r2qqovn",
+    this
+  ).then(() => {
+      status.style.color = "#22c55e";
+      status.innerText = "Message sent successfully! Our team will contact you soon.";
+      document.getElementById("contact-form").reset();
+  }, (error) => {
+      status.style.color = "#ef4444";
+      status.innerText = "Failed to send message. Please try again.";
+      console.log(error);
+  });
+});
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("fOy5DcJkensKNiogl");
+})();
+</script>
+
+
+
+
+
+
+
 
 
 <!-- MAP -->

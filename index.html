@@ -528,36 +528,101 @@ Helping businesses scale faster with smart technology.
     </div>
 
     <!-- RIGHT SIDE FORM -->
-    <div class="getstarted-form">
+   <div class="getstarted-form">
 
-      <form>
-        <div class="form-row">
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email Address" required>
-        </div>
+  <form id="getstarted-form">
 
-        <div class="form-row">
-          <input type="tel" placeholder="Phone Number">
-          <input type="text" placeholder="Company Name">
-        </div>
-
-        <div class="form-row">
-          <input type="text" placeholder="Industry">
-          <input type="text" placeholder="Interested Product">
-        </div>
-
-        <textarea placeholder="Tell us about your requirement"></textarea>
-
-        <button class="start-btn">
-          <i class="fa-solid fa-rocket"></i> Get Started
-        </button>
-      </form>
-
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
     </div>
 
-  </div>
+    <div class="form-row">
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <input type="text" name="company" placeholder="Company Name">
+    </div>
+
+    <div class="form-row">
+      <input type="text" name="industry" placeholder="Industry">
+       <!-- Correct Product Dropdown -->
+  <select name="product" required>
+    <option value="">Select Product</option>
+    <option>Chatbot AI</option>
+    <option>Email AI</option>
+    <option>WhatsApp AI</option>
+    <option>SMS AI</option>
+    <option>IVR AI</option>
+    <option>Content AI</option>
+    <option>Music AI</option>
+  </select>
+    </div>
+
+    <textarea name="message" placeholder="Tell us about your requirement"></textarea>
+
+    <button type="submit" class="start-btn">
+      <i class="fa-solid fa-rocket"></i> Get Started
+    </button>
+
+    <p id="getstarted-status" style="margin-top:10px;font-size:14px;"></p>
+
+  </form>
+
+</div>
+</div>
 
 </section>
+
+
+
+
+<script>
+document.getElementById("getstarted-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const status = document.getElementById("getstarted-status");
+  status.style.color = "#93c5fd";
+  status.innerText = "Sending request...";
+
+  emailjs.sendForm(
+    "service_6fqpn37",
+    "template_r2qqovn",
+    this
+  ).then(() => {
+      status.style.color = "#22c55e";
+      status.innerText = "Request sent successfully! Our team will contact you soon.";
+      document.getElementById("getstarted-form").reset();
+  }, (error) => {
+      status.style.color = "#ef4444";
+      status.innerText = "Failed to send request. Please try again.";
+      console.log(error);
+  });
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("fOy5DcJkensKNiogl");
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
