@@ -152,69 +152,27 @@ Helping businesses scale faster with smart technology.
 
 </div>
 
-
-<!-- RIGHT -->
 <div class="hero-right">
 
-<div class="label reveal">
-<span class="line"></span>
-<span>OUR PRODUCTS</span>
-</div>
-
-<div class="cards">
-<div class="card reveal">
-  <i class="fa-solid fa-robot"></i>
-  <div>
-    <h3>Chatbot AI</h3>
-    <p>Conversational agents available 24/7 for instant customer support.</p>
+  <div class="products-label-wrapper">
+    <div class="label-content">
+      <span class="line"></span>
+      <h2 class="heading-text">OUR PRODUCTS</h2>
+    </div>
   </div>
-</div>
 
-<div class="card reveal">
-  <i class="fa-solid fa-envelope"></i>
-  <div>
-    <h3>Email AI</h3>
-    <p>Smart email automation for faster responses and organized communication.</p>
-  </div>
-</div>
+  <div class="circle-container">
+    <div class="center-circle">rvAI</div>
 
-<div class="card reveal">
-  <i class="fa-brands fa-whatsapp"></i>
-  <div>
-    <h3>WhatsApp AI</h3>
-    <p>Automate conversations, reminders, and customer engagement on WhatsApp.</p>
-  </div>
-</div>
-
-<div class="card reveal">
-  <i class="fa-solid fa-comment-sms"></i>
-  <div>
-    <h3>SMS AI</h3>
-    <p>Send bulk messages and alerts quickly with automation support.</p>
-  </div>
-</div>
-
-<div class="card reveal">
-  <i class="fa-solid fa-phone-volume"></i>
-  <div>
-    <h3>IVR AI</h3>
-    <p>Voice automation system for calls, routing, and responses.</p>
-  </div>
-</div>
-
-<div class="card reveal">
-  <i class="fa-solid fa-pen"></i>
-  <div>
-    <h3>Content AI</h3>
-    <p>Create blogs, ads, and marketing content in seconds.</p>
-  </div>
-</div>
-
-<div class="card reveal">
-  <i class="fa-solid fa-music"></i>
-  <div>
-    <h3>Music AI</h3>
-    <p>Generate AI music and audio tracks for creative projects.</p>
+    <div class="orbit-wrapper">
+      <div class="orbit-circle c1"><div class="item-content"><i class="fa-solid fa-robot"></i><p>Chatbot</p></div></div>
+      <div class="orbit-circle c2"><div class="item-content"><i class="fa-solid fa-envelope"></i><p>Email</p></div></div>
+      <div class="orbit-circle c3"><div class="item-content"><i class="fa-brands fa-whatsapp"></i><p>WhatsApp</p></div></div>
+      <div class="orbit-circle c4"><div class="item-content"><i class="fa-solid fa-comment"></i><p>SMS AI</p></div></div>
+      <div class="orbit-circle c5"><div class="item-content"><i class="fa-solid fa-phone"></i><p>IVR AI</p></div></div>
+      <div class="orbit-circle c6"><div class="item-content"><i class="fa-solid fa-pen"></i><p>Content</p></div></div>
+      <div class="orbit-circle c7"><div class="item-content"><i class="fa-solid fa-music"></i><p>Music AI</p></div></div>
+    </div>
   </div>
 </div>
 
@@ -224,6 +182,113 @@ Helping businesses scale faster with smart technology.
 
 </div>
 </section>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* =========================
+     SCROLL REVEAL ANIMATION
+  ========================== */
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(
+    ".reveal, .about-section, .products-section, .benefits-section, .getstarted-section, .scroll-left, .scroll-right"
+  ).forEach(el => {
+    observer.observe(el);
+  });
+
+
+  /* =========================
+     HERO CANVAS PARTICLES
+  ========================== */
+
+  const canvas = document.getElementById("bgCanvas");
+
+  if (canvas) {
+
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+
+    function resizeCanvas() {
+      const hero = document.querySelector(".hero");
+      canvas.width = window.innerWidth;
+      canvas.height = hero ? hero.offsetHeight : window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    // Mobile optimization
+    let particleCount = window.innerWidth < 768 ? 30 : 60;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2 + 1,
+        dx: (Math.random() - 0.5) * 0.4,
+        dy: (Math.random() - 0.5) * 0.4
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.globalCompositeOperation = "lighter";
+
+      particles.forEach(p => {
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(147,197,253,0.4)";
+        ctx.fill();
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+
+
+  /* =========================
+     NAVBAR MOBILE TOGGLE
+  ========================== */
+
+  const navToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+
+});
+</script>
+
 
 
 
@@ -686,89 +751,6 @@ document.getElementById("getstarted-form").addEventListener("submit", function(e
 </footer>
 
 
-
-
-<script>
-
-/* RUN AFTER PAGE LOAD */
-document.addEventListener("DOMContentLoaded", function () {
-
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
-
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{threshold:0.2});
-
-/* ALL elements to animate */
-document.querySelectorAll(
-  ".reveal, .card, .about-section, .products-section, .benefits-section, .getstarted-section, .scroll-left, .scroll-right"
-).forEach(el=>{
-  observer.observe(el);
-});
-
-
-/* =========================
-   HERO CANVAS ANIMATION
-========================= */
-
-const canvas = document.getElementById("bgCanvas");
-
-if(canvas){
-  const ctx = canvas.getContext("2d");
-
-  let particles=[];
-
-  function resizeCanvas(){
-    const hero=document.querySelector(".hero");
-    canvas.width=window.innerWidth;
-    canvas.height=hero ? hero.offsetHeight : window.innerHeight;
-  }
-
-  resizeCanvas();
-  window.addEventListener("resize",resizeCanvas);
-
-  /* particles create */
-  for(let i=0;i<60;i++){
-    particles.push({
-      x:Math.random()*canvas.width,
-      y:Math.random()*canvas.height,
-      r:Math.random()*2,
-      dx:(Math.random()-0.5)*0.5,
-      dy:(Math.random()-0.5)*0.5
-    });
-  }
-
-  function animate(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-
-    particles.forEach(p=>{
-      p.x+=p.dx;
-      p.y+=p.dy;
-
-      if(p.x<0||p.x>canvas.width) p.dx*=-1;
-      if(p.y<0||p.y>canvas.height) p.dy*=-1;
-
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle="rgba(147,197,253,0.4)";
-      ctx.fill();
-    });
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-}
-
-}); // DOMContentLoaded end
-
-</script>
 
 
 
